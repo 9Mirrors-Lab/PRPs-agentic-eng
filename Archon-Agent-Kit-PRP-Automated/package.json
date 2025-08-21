@@ -1,0 +1,50 @@
+{
+  "name": "archon-agent-kit-prp-automated",
+  "version": "1.0.0",
+  "description": "Enhanced PRP automation for Archon Agent Kit with project-local environments",
+  "main": "lib/index.js",
+  "bin": {
+    "archon-agent-kit-prp-automated": "./bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "templates/",
+    "project-initializers/",
+    "claude_md_files/",
+    "PRPs/"
+  ],
+  "scripts": {
+    "start": "node bin/cli.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "archon",
+    "prp",
+    "automation",
+    "project-setup",
+    "ai-development",
+    "cursor",
+    "claude"
+  ],
+  "author": "Archon Agent Kit Team",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "chalk": "^4.1.2",
+    "inquirer": "^9.0.0",
+    "fs-extra": "^11.0.0",
+    "path": "^0.12.7"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/9Mirrors-Lab/PRPs-agentic-eng.git"
+  },
+  "bugs": {
+    "url": "https://github.com/9Mirrors-Lab/PRPs-agentic-eng/issues"
+  },
+  "homepage": "https://github.com/9Mirrors-Lab/PRPs-agentic-eng#readme"
+}

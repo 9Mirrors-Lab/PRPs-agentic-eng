@@ -45,19 +45,59 @@ Archon-Agent-Kit-PRP-Automated is an enhanced version of the original Process fo
 
 ```
 Archon-Agent-Kit-PRP-Automated/
-├── .claude/commands/           # Claude-specific commands including /initialize-project and /generate-next-steps
-├── .cursor/commands/           # Cursor-specific commands including initialize-project and generate-next-steps
+├── bin/                        # CLI entry point
+│   └── cli.js                 # Main command-line interface
+├── lib/                        # Core Node.js modules
+│   ├── ai-selector.js         # AI detection and selection
+│   ├── project-initializer.js # Project setup and management
+│   ├── project-status.js      # Project health monitoring
+│   └── index.js               # Main library exports
+├── .claude/commands/           # Claude-specific commands
+├── .cursor/commands/           # Cursor-specific commands
 ├── project-initializers/       # Python-based automation system
-│   ├── technology_detector.py  # Detects tech stack from INITIAL.md
-│   ├── project_structure_generator.py  # Generates project structure
-│   ├── project_initializer.py # Main orchestrator with Archon integration
-│   └── archon_integration.py  # 🆕 Archon MCP server integration
-├── claude_md_files/           # Technology-specific CLAUDE.md files
+├── claude_md_files/           # Technology-specific guides
 ├── PRPs/                      # PRP templates and structure
+├── package.json                # NPM package configuration
 └── README.md                  # This file
 ```
 
 ## 🎯 **Key Benefits**
+
+## 🖥️ **CLI Commands**
+
+### **Main Commands**
+```bash
+# Initialize new project
+archon-agent-kit-prp-automated init
+
+# Setup in existing project
+archon-agent-kit-prp-automated setup
+
+# Check project status
+archon-agent-kit-prp-automated status
+
+# Show detailed help
+archon-agent-kit-prp-automated help
+```
+
+### **Command Options**
+```bash
+# Initialize with specific INITIAL.md file
+archon-agent-kit-prp-automated init -f ./my-project.md
+
+# Select specific AI type
+archon-agent-kit-prp-automated init -a claude
+archon-agent-kit-prp-automated init -a cursor
+
+# Skip prompts and use defaults
+archon-agent-kit-prp-automated init -y
+```
+
+### **AI Selection**
+- **Auto-detect**: Automatically detects available AI tools
+- **Claude**: Full command integration with Claude
+- **Cursor**: Native IDE integration with Cursor
+- **Manual**: User selects when auto-detection fails
 
 ### **1. Intelligent Technology Detection**
 - **Automatically reads** your `INITIAL.md` file
@@ -89,13 +129,33 @@ Archon-Agent-Kit-PRP-Automated/
 - **Enables intelligent search** through project patterns and best practices
 - **Provides context-rich guidance** for next development steps
 
+### **6. 🆕 Project-Local Architecture**
+- **Isolated environment** - each project gets its own setup
+- **No system-wide changes** - respects existing environment
+- **Easy cleanup** - just delete project folder to remove everything
+- **Team collaboration** - consistent environment across all developers
+
 ## 🚀 **Getting Started with Archon-Agent-Kit-PRP-Automated**
 
-### **Step 1: Copy Archon-Agent-Kit-PRP-Automated to New Project**
+### **Option 1: NPM Installation (Recommended)**
+```bash
+# Install globally for easy access
+npm install -g archon-agent-kit-prp-automated
+
+# Or use npx for one-time use
+npx archon-agent-kit-prp-automated init
+
+# Initialize in your project
+archon-agent-kit-prp-automated init
+```
+
+### **Option 2: Manual Copy (Advanced Users)**
 ```bash
 # Copy the entire Archon-Agent-Kit-PRP-Automated folder to your new project location
 cp -r Archon-Agent-Kit-PRP-Automated/ /path/to/new/project/
 cd /path/to/new/project/Archon-Agent-Kit-PRP-Automated
+npm install
+npm start
 ```
 
 ### **Step 2: Create Your INITIAL.md**
