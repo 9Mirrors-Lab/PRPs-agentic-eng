@@ -27,9 +27,9 @@ Archon-Agent-Kit-PRP-Automated is an enhanced version of the original Process fo
 7. **Manually select appropriate CLAUDE.md files**
 
 ### **Archon-Agent-Kit-PRP-Automated Workflow (Automated + Intelligent):**
-1. Copy `Archon-Agent-Kit-PRP-Automated/` folder to new project location
+1. **Install via npm** or use npx for one-time use
 2. Create `INITIAL.md` with your project specification
-3. Run `/initialize-project INITIAL.md`
+3. Run the CLI command to initialize your project
 4. **Everything else is automated!**
    - Technology stack detection
    - CLAUDE.md file selection and customization
@@ -64,6 +64,8 @@ Archon-Agent-Kit-PRP-Automated/
 ## 🎯 **Key Benefits**
 
 ## 🖥️ **CLI Commands**
+
+**The CLI is now the primary interface for Archon-Agent-Kit-PRP-Automated!** Install the package globally and use these commands to manage your projects.
 
 ### **Main Commands**
 ```bash
@@ -158,6 +160,9 @@ npm install
 npm start
 ```
 
+### **Step 1: Install and Setup**
+Choose your preferred installation method above. The npm installation is recommended for most users as it provides easy updates and global access.
+
 ### **Step 2: Create Your INITIAL.md**
 Create an `INITIAL.md` file that describes your project and technology stack:
 
@@ -176,10 +181,16 @@ Create an `INITIAL.md` file that describes your project and technology stack:
 
 ### **Step 3: Run the Initializer**
 ```bash
-# Option 1: Use the Claude command
+# Option 1: Use the npm CLI command (Recommended)
+archon-agent-kit-prp-automated init
+
+# Option 2: Use npx for one-time use
+npx archon-agent-kit-prp-automated init
+
+# Option 3: Use the Claude command (if available)
 /initialize-project INITIAL.md
 
-# Option 2: Run manually
+# Option 4: Run manually (Advanced)
 cd project-initializers
 python project_initializer.py ../INITIAL.md --project-root ../
 ```
@@ -439,13 +450,14 @@ Manual Setup + Guesswork (30+ minutes):
 Into this:
 ```
 Intelligent Automated Setup (2 minutes + 30 seconds):
-1. Create INITIAL.md
-2. Run /initialize-project
-3. Everything else is automatic!
-4. Run /prime-core for context
-5. **🆕 Run /generate-next-steps for intelligent guidance**
-6. **🆕 Get context-rich, project-specific suggestions**
-7. **🆕 Execute commands with confidence**
+1. Install via npm: `npm install -g archon-agent-kit-prp-automated`
+2. Create INITIAL.md
+3. Run: `archon-agent-kit-prp-automated init`
+4. Everything else is automatic!
+5. Run `/prime-core` for context
+6. **🆕 Run `/generate-next-steps` for intelligent guidance**
+7. **🆕 Get context-rich, project-specific suggestions**
+8. **🆕 Execute commands with confidence**
 ```
 
 **Result**: You save 28+ minutes per project, get a consistent, professional setup every time, and **eliminate the guesswork** of what to do next with intelligent, context-aware guidance.
