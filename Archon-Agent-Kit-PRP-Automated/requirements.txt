@@ -1,0 +1,23 @@
+# Process2 Python Dependencies
+# Core dependencies for project initialization and Archon MCP integration
+
+# HTTP requests for Archon MCP server communication
+requests>=2.31.0
+
+# Path handling and file operations
+pathlib2>=2.3.7; python_version < "3.4"
+
+# Data validation and serialization
+pydantic>=2.0.0
+
+# Logging and debugging
+colorlog>=6.7.0
+
+# Optional: Enhanced terminal output
+rich>=13.0.0
+
+# Optional: Configuration management
+python-dotenv>=1.0.0
+
+# Optional: YAML support for configuration files
+PyYAML>=6.0.1
